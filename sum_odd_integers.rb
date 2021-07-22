@@ -11,3 +11,21 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+
+input_sumOdd = gets.chomp.gsub(/[^0-9]/, "")
+
+sumOdd_count = input_sumOdd.length
+
+p sumOdd_count
+
+counter_sumOdd = 0
+sumOdd = 0
+
+while counter_sumOdd < sumOdd_count
+    if input_sumOdd[counter_sumOdd].to_i.odd? == true
+        sumOdd = sumOdd + input_sumOdd[counter_sumOdd].to_i
+    end
+    counter_sumOdd = counter_sumOdd + 1
+end
+
+p sumOdd

@@ -16,6 +16,9 @@
 #   to find out what kind of thing it is. We first met it way back in the Integer Chapter,
 #   and we used it a lot especially when exploring an API response, which could come back to us in different shapes and sizes.
 
+require "date"
+require "time"
+
 unpredictable_inputs = [
   "Hello!",
   Time.now,
@@ -29,7 +32,37 @@ unpredictable_inputs = [
 
 some_random_input = unpredictable_inputs.sample
 
-p some_random_input
+#p some_random_input
 
 # Write your code below
+
+if some_random_input.class == String
+  p some_random_input.downcase
+
+elsif some_random_input.class == Time
+  p some_random_input.strftime("%A").downcase
+
+elsif some_random_input.class == Integer
+  if some_random_input.odd? == true
+    p "#{some_random_input} is odd"
+  else 
+    p "#{some_random_input} is even"
+  end
+
+elsif some_random_input.class == Symbol
+    p some_random_input.downcase
+
+elsif some_random_input == nil
+    p "no object provided"
+
+elsif some_random_input == true
+    p "you may pass"
+
+elsif some_random_input == false
+    p "you may not pass"
+
+elsif some_random_input.class == Hash
+  p some_random_input.keys
+
+end
 

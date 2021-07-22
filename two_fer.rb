@@ -9,3 +9,11 @@
 # If no name is given, the result should be "One for you, one for me."
 
 p "Enter a name:"
+
+two_ferName = gets.chomp.capitalize
+
+if two_ferName != ""
+    p "One for " + two_ferName + ", one for me."
+else 
+    p "One for you, one for me."
+end

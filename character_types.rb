@@ -14,3 +14,21 @@
 #  "Number of digits in the string is: 4"
 
 p "Enter a sentence:"
+
+character_typesCount = gets.chomp
+character_typesCountLetters = character_typesCount.gsub(/[^a-z]/i, "").split("")
+character_typesCountDigits = character_typesCount.gsub(/[^0-9]/, "").split("")
+
+#p character_typesCount
+p character_typesCountDigits
+p character_typesCountLetters
+
+countLetters = character_typesCountLetters.count
+
+countSpaces = character_typesCount.count(" ")
+
+countDigits = character_typesCountDigits.count
+
+p "Number of letters in the string is: #{countLetters}"
+p "Number of spaces in the string is: #{countSpaces}"
+p "Number of digits in the string is: #{countDigits}"

@@ -37,3 +37,23 @@
 
 
 p "Enter an integer"
+
+input_raindrops = gets.chomp
+
+if (input_raindrops.to_i % 3) != 0 && (input_raindrops.to_i % 5) != 0 && (input_raindrops.to_i % 7) != 0
+    p input_raindrops
+elsif (input_raindrops.to_i % 3) == 0 && (input_raindrops.to_i % 5) == 0 && (input_raindrops.to_i % 7) == 0
+    p "PlingPlangPlong"
+elsif (input_raindrops.to_i % 3) == 0 && (input_raindrops.to_i % 5) == 0
+    p "PlingPlang"
+elsif (input_raindrops.to_i % 3) == 0 && (input_raindrops.to_i % 7) == 0
+    p "PlingPlong"
+elsif (input_raindrops.to_i % 5) == 0 && (input_raindrops.to_i % 7) == 0
+    p "PlangPlong"
+elsif (input_raindrops.to_i % 3) == 0
+    p "Pling"
+elsif (input_raindrops.to_i % 5) == 0
+    p "Plang"
+elsif (input_raindrops.to_i % 7) == 0
+    p "Plong"
+end

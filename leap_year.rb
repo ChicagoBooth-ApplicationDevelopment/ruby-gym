@@ -14,3 +14,25 @@
 #   5. The year is not a leap year (it has 365 days).
 
 p "Enter a year:"
+
+require "date"
+
+input_leapYear = gets.chomp
+
+# if (input_leapYear.to_i % 4) == 0 &&
+#     if (input_leapYear.to_i % 100) == 0
+#         if (input_leapYear.to_i % 400) == 0
+#             p "#{input_leapYear} is a leap year!"
+#         end
+#         p "#{input_leapYear} is a leap year!"
+#     end
+#     p "#{input_leapYear} is not a leap year."
+# end
+
+if (input_leapYear.to_i % 4) == 0 && (input_leapYear.to_i % 100) == 0 && (input_leapYear.to_i % 400) == 0
+    p "#{input_leapYear} is a leap year!"
+elsif (input_leapYear.to_i % 4) == 0 && (input_leapYear.to_i % 100) != 0
+    p "#{input_leapYear} is a leap year!"
+else 
+    p "#{input_leapYear} is not a leap year."
+end
